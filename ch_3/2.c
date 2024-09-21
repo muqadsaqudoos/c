@@ -2,21 +2,22 @@
 
 int main()
 {
-    float income;
+    int income;
+    float tax;
     printf("Enter income: ");
-    scanf("%f", &income);
-
-    if (income > 10.0)
-    {
-        printf("Tax paid is 30 percent");
+    scanf("%d", &income);
+    if (income<250000){
+        tax = 0;
     }
-    else if (income > 5.0)
-    {
-        printf("Tax paid is 20 percent");
+    else if (income>250000 && income<500000){
+        tax = 0.05 *(income - 250000);
     }
-    else
-    {
-        printf("Tax paid is 5 percent");
+    else if (income>500000 && income<1000000){
+        tax = 0.05 *(500000 - 250000) + 0.2*(income - 500000);
     }
+    else{
+        tax = 0.05 *(500000 - 250000) + 0.2*(1000000 - 500000) + 0.3*(income-1000000); 
+    }
+    printf("Tax is %.2f",tax);
     return 0;
 }
