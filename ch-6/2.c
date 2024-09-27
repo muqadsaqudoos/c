@@ -1,8 +1,8 @@
 #include<stdio.h>
 
 int address(int* a){
-    printf("The value of i is %d\n", a);    
-    printf("The value at i is %d", *a);   
+    printf("The value of a is %u\n", a);    
+    printf("The value at a is %d", *a);   
     return 5; 
 }
 
